@@ -4,17 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Página de inicio</title>
+<title>Mi Mascota</title>
 </head>
 <body>
-	<h1>MASCOTAS PREFERIDAS</h1>
-	<c:if test="${datos.saludar}">
-	<p>Buenos días ${datos.usuario} </p>
-	</c:if>
-	<p>Su mascota es ${datos.nombreMascota} </p>
-	<p>y su raza es ${datos.razaMascota} </p>
-
-	<p><a href="mascota.do">Info de ${datos.nombreMascota}</a></p>
-
+	<h1>${mascota.nombre}</h1>
+	<p>Raza: ${mascota.raza}</p>
+	<p>Fecha de nacimiento: ${mascota.fechaNac}</p>
+	<p>Colores: ${mascota.colores}</p>
+	<p><a href="index">Regresar</a></p>
 </body>
 </html>

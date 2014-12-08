@@ -4,17 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Página de inicio</title>
+<title>Mascotas preferidas</title>
 </head>
 <body>
-	<h1>MASCOTAS PREFERIDAS</h1>
-	<c:if test="${datos.saludar}">
-	<p>Buenos días ${datos.usuario} </p>
-	</c:if>
-	<p>Su mascota es ${datos.nombreMascota} </p>
-	<p>y su raza es ${datos.razaMascota} </p>
+	<h1>MIS MASCOTAS PREFERIDAS</h1>
 
-	<p><a href="mascota.do">Info de ${datos.nombreMascota}</a></p>
+	<c:forEach var="mascota" items="${mascotas}" >
+		<p><a href="desc.do?id=${mascota.id}"> ${mascota.nombre}</a></p>
+	</c:forEach>
 
 </body>
 </html>

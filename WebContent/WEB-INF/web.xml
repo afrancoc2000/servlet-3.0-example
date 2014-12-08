@@ -9,10 +9,36 @@
 	<servlet-name>Inicio</servlet-name>
 	<servlet-class>org.example.webapp.ExampleServlet</servlet-class>
 </servlet>
-
 <servlet-mapping>
 	<servlet-name>Inicio</servlet-name>
 	<url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Mascota</servlet-name>
+	<servlet-class>org.example.webapp.MascotaServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Mascota</servlet-name>
+	<url-pattern>/mascota.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>MascotaIndex</servlet-name>
+	<servlet-class>org.example.webapp.mascota.MascotaIndexServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MascotaIndex</servlet-name>
+	<url-pattern>/mascota/index.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>MascotaDesc</servlet-name>
+	<servlet-class>org.example.webapp.mascota.MascotaDescServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MascotaDesc</servlet-name>
+	<url-pattern>/mascota/desc.do</url-pattern>
 </servlet-mapping>
 
 </web-app>
