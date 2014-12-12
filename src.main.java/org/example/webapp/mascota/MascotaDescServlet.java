@@ -13,12 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 public class MascotaDescServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
-		long id = Long.parseLong(req.getParameter("id"));
+		
+		String idStr = req.getParameter("id");
+		long id = Long.parseLong(idStr);
+		
 		ArrayList<MascotaPOJO> mascotas = MascotaPOJO.getListaMascotas(); 
 		MascotaPOJO mascota = null;
 		
 		for(MascotaPOJO masc: mascotas){
-			if(masc.getId() == id) mascota = masc;
+			if(masc.getId() == id){
+				mascota = masc;
+			}
 		}
 		
 		if(mascota == null){
